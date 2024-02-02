@@ -87,8 +87,29 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Rutas - Definir tus rutas aquí
 app.use(require('./router/indexRouter'))
 app.use(require('./router/loginRouter'))
+app.use(require('./router/menuRouter'))
 app.get('/dashboard', (req, res) => {
     res.render('dashboard/dashboard')
 })
+app.get('/login', (req, res) => {
+    res.render('login/login')
+}) 
+app.get('/registro', (req, res) => {
+    res.render('login/registro')
+}) 
+app.get('/listar', (req, res) => {
+    res.render('restaurante/listar')
+})
+app.get('/añadir', (req, res) => {
+    res.render('restaurante/añadir')
+})
+app.get('/carrito', (req, res) => {
+    res.render('carrito/carrito')
+})
+app.get('/listar', (req, res) => {
+    res.render('menu/listar')
+})
+
+
 // Exportar la aplicación
 module.exports = app;

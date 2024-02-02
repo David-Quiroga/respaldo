@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/carrito.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/logo1.jpg">
+    <title>Bienvenido</title>
+</head>
+<body>
+
+    <div id="sidebar">
+        <h1>Bienvenido</h1>
+        <h2>Samuel</h2>
+        <ul>
+            <li>
+                <button id="dashboard-button">
+                    <a href="/dashboard">
+                        <img src="/img/iconocasa.png" alt="restaurante">Dashboard
+                    </a>
+                </button>
+                <button id="menu-button">
+                    <a href="/menu">
+                        <img src="/img/menuicono.png" alt="creacion">Creacion de menus
+                    </a>
+                </button>
+                <button id="carrito-button">
+                    <a href="/carrito">
+                        <img src="/img/carritoicono.png" alt="carrito">Carrito de compras
+                    </a>
+                </button>
+                <button id="metodos-button">
+                    <a href="/metodos">
+                        <img src="/img/tarjetaicono.png" alt="metodos">Metodos de pagos
+                    </a>
+                </button>
+                <button id="visualizar-button">
+                    <a href="/visualizar">
+                        <img src="/img/visulaizarmenuicono.png" alt="visualizar">Visualizar menu
+                    </a>
+                </button>
+            </li>
+        </ul>
+        <img src="/img/logo1.jpg" id="logoizquierdo">
+    </div>
+
+    <div id="main-content">
+        <div id="user-info">
+            <img src="/img/usuarioicono.png">
+            <h2>Samuel Robertson</h2>
+            <p>Restaurante Administrador</p>
+        </div>
+        <h1>Gestion de pedidos</h1>
+    </div>
+
+
+    <div id="actividad">
+        <h1>Confirmar pedidos</h1>
+        <h3>Tienes 4 pedidos en espera</h3>
+
+        <div id="actividad-tarjeta">
+            <h1>Nuevos pedidos<br>entrantes</h1>
+
+            <div id="platos">
+                <h2>10 ceviches</h2>
+                <h2>3 pizzas</h2>
+                <h2>3 bloody marys</h2>
+            </div>
+
+            <div id="total">
+                <h3>Total: 16 platos</h3>
+            </div>
+
+            <div>
+                <button id="conf-btn">Confirmar</button>
+                <button id="close-btn">Rechazar</button>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <div id="productos-mas-vendidos">
+        <h1>Carrito de compras</h1>
+        <h3>Confirmaste 4 pedidos</h3>
+
+        <div id="platos-cartas">
+            <ul>
+                <li>
+                    <button id="plato1"> 
+                        <div id="imagen-izquierda">
+                            <a href="/dashboard">
+                                <img src="/img/pizza.jpeg" alt="restaurante">
+                            </a>
+                        </div>   
+                        <div id="texto-medio">
+                            <h1>Pizza</h1>
+                            <h3>Cant: 10</h3>
+                            <h2>$21.00</h2>
+                        </div>
+                        <div id="imagen-derecha">
+                            <a href="">
+                                <img src="/img/eliminar.png">
+                            </a>
+                        </div>
+                    </button>
+
+                    <button id="plato2">
+                        <a href="/dashboard">
+                            <img src="/img/tiramisu.jpeg" alt="restaurante">
+                        </a>
+                        <div id="texto-medio">
+                            <h1>Tiramisu</h1>
+                            <h3>Cant: 5</h3>
+                            <h2>$15.00</h2>
+                        </div>
+                        <div id="imagen-derecha">
+                            <a href="">
+                                <img src="/img/eliminar.png">
+                            </a>
+                        </div>
+                    </button>
+
+                    <button id="plato3">
+                        <a href="/dashboard">
+                            <img src="/img/flan.jpeg" alt="restaurante">
+                        </a>
+                        <div id="texto-medio">
+                            <h1>Flan</h1>
+                            <h3>Cant: 5</h3>
+                            <h2>$5.00</h2>
+                        </div>
+                        <div id="imagen-derecha">
+                            <a href="">
+                                <img src="/img/eliminar.png">
+                            </a>
+                        </div>
+                    </button>
+
+                    <button id="plato4">
+                        <a href="/dashboard">
+                            <img src="/img/ramen.jpeg" alt="restaurante">
+                        </a>
+                        <div id="texto-medio">
+                            <h1>Ramen</h1>
+                            <h3>Cant: 5</h3>
+                            <h2>$15.00</h2>
+                        </div>
+                        <div id="imagen-derecha">
+                            <a href="">
+                                <img src="/img/eliminar.png">
+                            </a>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        
+        <div id="total-platos-car">
+            <h2>Total: $46.00</h2>
+        </div>
+
+    </div>
+
+</body>
+</html>

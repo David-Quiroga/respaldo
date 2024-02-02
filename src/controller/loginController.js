@@ -1,5 +1,8 @@
 const login = {}
 
+
+
+
 const passport = require("passport")
 
 //!LOGIN
@@ -23,7 +26,7 @@ login.sendRegistro = passport.authenticate('local.signup', {
 });
 
 // login.sendRegistro = (req, res, next) => {
-//     console.log("Datos de registro recibidos:", req.body); // Imprime los datos recibidos del formulario de registro
+//     console.log("Datos de registro recibidos:", req.body);
 //     passport.authenticate('local.signup', {
 //         successRedirect: '/login',
 //         failureRedirect: '/registro',
@@ -34,6 +37,7 @@ login.sendRegistro = passport.authenticate('local.signup', {
 login.showRegister = async (req, res) => {
     res.render('login/registro')
 }
+
 
 
 

@@ -7,6 +7,7 @@ const sql = require('../Database/dataBase.sql')
 restaurante.show = (req, res) => {
     res.render('restaurante/listar');
 }
+
 restaurante.sendCarsadd = async (req, res) => {
     const id = req.user.idUsers
     const { idRestaurante, nombreRestaurante, imagenRestaurante} = req.body
@@ -80,7 +81,7 @@ restaurante.updateRestaurante = async (req, res) => {
         }
         sql.query("UPDATE restaurantes SET imageRestaurantes = ? WHERE idRestaurantes = ?", [
             imagenUsuario.name,
-            idCarro,
+            idRestaurante,
         ]);
         console.log("Imagen de usuario ingresada");
     });
