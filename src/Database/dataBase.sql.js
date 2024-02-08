@@ -1,44 +1,41 @@
-const { createPool } = require("mysql2");
-const { promisify } = require("util");
+const {createPool} = require ("mysql2")
+const {promisify} = require ("util")
 const dotenv = require('dotenv');
+
+// const { database } = require('../keys')
+
 
 dotenv.config();
 
-const { MYSQLHOST, MYSQLadmin, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT, MYSQL_URI } = require("../keys");
+const{ MYSQLHOST, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE, MYSQLPORT, MYSQL_URI, } = require ("../keys");
 
-const pool = createPool({
-    admin: MYSQLadmin,
+const pool = createPool ({
+    user: MYSQLUSER,
     password: MYSQLPASSWORD,
     host: MYSQLHOST,
     port: MYSQLPORT,
     database: MYSQLDATABASE,
-    // Opcional: uri: MYSQL_URI, (no es necesario)
-});
+    uri: MYSQL_URI
+})
 
-pool.getConnection((err, connection) => {
-    if (err) {
-        switch (err.code) {
-            case 'PROTOCOL_CONNECTION_LOST':
-                console.error('Se cerró la conexión a la base de datos');
-                break;
-            case 'ER_CON_COUNT_ERROR':
-                console.error('La base de datos tiene demasiadas conexiones');
-                break;
-            case 'ECONNREFUSED':
-                console.error('La conexión a la base de datos fue rechazada');
-                break;
-            default:
-                console.error('Error inesperado:', err.message);
+pool.getConnection((err, conecction)=>{
+    if(err){
+        if(err.code === 'PROTOCOL_CONNECTION_LOST'){
+            console.error('se cerro la conexión a la base de datos');
+        }
+        if(err.code === 'ER_CON_COUNT_ERROR'){
+            console.error('La base de datos tiene muchas conexiones')
+        }
+        if(err.code === 'ECONNREFUSED'){
+            console.error('La conexion a la base de datos no realizada')
         }
     }
-
-    if (connection) {
-        connection.release();
-        console.log('Base de datos conectada');
-        return;
+    if(conecction){
+        conecction.release();
+        console.log('Base de datos Conectada');
+        return
     }
-});
+})
 
 pool.query = promisify(pool.query);
-
 module.exports = pool;

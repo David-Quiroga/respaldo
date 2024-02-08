@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
 }
-
 body::after {
     content: "";
     background: url(../img/fondo.png);
@@ -18,7 +17,6 @@ body::after {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 #sidebar {
     position: fixed;
     width: 300px;
@@ -29,7 +27,6 @@ body::after {
     overflow: auto;
     box-shadow: 10px 0px 15px -1px rgba(0, 0, 0, 0.6);
 }
-
 #sidebar h1 {
     font-size: 39px;
     color: #000000;
@@ -37,7 +34,9 @@ body::after {
     padding-top: 50px;
     font-weight: 900;
 }
-
+#inputImagen {
+    display: none; /* Oculta el input de tipo "file" */
+}
 #sidebar h2 {
     margin-bottom: 60px;
     color: #000000;
@@ -46,13 +45,11 @@ body::after {
     font-weight: 450;
     line-height: 0;
 }
-
 #sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 #sidebar ul li {
     padding: 10px 0;
     border-bottom: 1px solid #333333;
@@ -60,17 +57,15 @@ body::after {
     text-align: center;
     cursor: pointer;
 }
-
 #sidebar ul li:last-child {
     border-bottom: none;
 }
-
 #sidebar-button {
     background-color: #FFFBF0;
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
-    float: left; /* Cambia 'center' por 'left' */
+    float: left;
     padding: 15px 50px;
     border-radius: 0 10px 10px 0;
     color: #333333;
@@ -81,71 +76,55 @@ body::after {
     margin-right: 15px;
     margin-left: -20px;
 }
-
-h1 {
-    color: black;
-}
-
 #main-content {
     margin-left: 320px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-
-#user-info {
-    margin-top: 50px;
-    align-items: right;
-    text-align: left;
-}
-
 #main-content h1 {
     text-align: left;
-    margin-top: -30px;
-    margin-bottom: 40px;
+    margin-top: 40px;
     margin-left: 50px;
-    padding-bottom: 10px;
-    width: 17%;
-    padding-left: 30px;
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
 }
 #lineahorizontal{
     background-color: #000000;
-    border-top: 1px solid black;
-    margin: -10px 0 0 -40px;
-    width: 1600px;
+    border-top: 2px solid black;
+    margin: 20px 0 0 -20px;
+    width: 1181px;
     float: center;
+}
+#user-info {
+    align-items: right;
+    text-align: left;
 }
 #user-info h2 {
     font-size: 20px;
     text-align: left;
-    padding-left: 1200px;
+    margin-left: 850px;
     margin-top: -50px;
     font-family: 'Montserrat', sans-serif;
 }
-
 #user-info p {
     font-size: 15px;
     text-align: left;
-    padding-left: 1200px;
+    margin-left: 850px;
     font-family: 'Montserrat', sans-serif;
 }
-
 #user-info img {
+    position: absolute;
     width: 50px;
     height: 50px;
-    padding-left: 1150px;
-    margin-top: -1px;
+    margin-left: 785px;
+    margin-top: -50px;
 }
-
 #card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 #card1 {
@@ -154,22 +133,22 @@ h1 {
     background-size: cover; /* Para que la imagen cubra todo el div */
     background-position: center; /* Para centrar la imagen */
     background-repeat: no-repeat; 
-    margin-top: 20px;
-    margin-left: 130px;
-    width: 1200px;
-    height: 800px;
+    margin-top: 40px;
+    margin-left: 100px;
+    width: 900px;
+    height: 650px;
     box-sizing: border-box;
     text-align: left; /* Alinea el texto a la izquierda */
     border-radius: 20px;
     padding: 20px; /* Añade un poco de espacio interno para mayor legibilidad */
 }
 
-form {
-    margin-top: 4%; /* Ajusta el margen superior del formulario según tus necesidades */
-    margin-left: 8%;
+#card1 form {
+    margin-top: 20px; /* Ajusta el margen superior del formulario según tus necesidades */
+    margin-left: 40px;
 }
 
-label {
+#card1 label {
     display: block;
     font-size: 30px; /* Ajusta el tamaño de la fuente de las etiquetas según tus necesidades */
     font-family: 'Montserrat', sans-serif;
@@ -177,7 +156,7 @@ label {
     color: #F5F5DC;
 }
 
-input {
+#card1 input {
     font-family: 'Montserrat', sans-serif;
     background-color: #E3E2E2;
     width: 89%; /* Ajusta el ancho de los inputs para que ocupen todo el contenedor */
@@ -192,76 +171,74 @@ input {
 #subir-archivo{
     background-color: #E3E2E2;
     width: 45%;
+    height: 250px;
     display: inline-block;
     border-radius: 20px;    
-    margin-top: 40px;
+    margin-top: 30px;
     margin-right: 10px;
+}
+#subir-archivo h3{
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+    font-size: 13px;
+    padding-bottom: 20px;
 }
 #subir-archivo label{
     font-family: 'Montserrat', sans-serif;
     color: #000000;
     padding-top: 15px;
-    padding-left: 20px;
+    padding-left: 10px;
+    font-size: 25px;
 }
 #subir-img-medio{
     display: block;
     margin: 0 auto;
-    width: 250px;
-    height: 250px;
-}
-#subir-archivo h3{
-    font-family: 'Montserrat', sans-serif;
-    margin-left: 50px;
-    padding-bottom: 20px;
+    width: 130px;
+    height: 130px;
 }
 
+#subir-archivo h3 label {
+    display: inline-block;
+    background-color: #CDCACA;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    width: 190px;
+    height: 35px;
+    font-size: 20px;
+}
+
+#subir-archivo h3 label:hover {
+    background-color: #80b082;
+}
 #tipo-de-comida{
-    width: 43%;
+    width: 40%;
     display: inline-block;
     vertical-align: top;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 #tipo-de-comida label{
     font-family: 'Montserrat', sans-serif;
-    color: #000000;
+    color: #fff;
 }
 #tipoComida{
     font-family: 'Montserrat', sans-serif;
     background-color: #E3E2E2;
-    width: 460px;
-    height: 60px;
-    margin-top: 20px;
+    width: 350px;
+    height: 50px;
+    margin-top: 5px;
     border-radius: 15px;
 }
 #listo-btn{
     font-family: 'Montserrat', sans-serif;
-    width: 300px;
-    height: 60px;
+    width: 250px;
+    height: 50px;
     display: block;
-    margin-left: 580px;
-    margin-top: -80px;
+    margin-left: 300px;
+    margin-top: 100px;
     border-radius: 20px;
     border: none;
     background-color: #0085FF;
     font-size: 30px;
     color: #FFFFFF;
-}
-#inputImagen {
-    display: none; /* Oculta el input de tipo "file" */
-}
-
-h3 label {
-    display: inline-block;
-    background-color: #CDCACA;
-    color: white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    width: 180px;
-    height: 40px;
-    font-size: 20px;
-}
-
-h3 label:hover {
-    background-color: #80b082;
 }

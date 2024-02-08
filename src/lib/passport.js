@@ -19,7 +19,7 @@ passport.use(
 			passReqToCallback: true,
 		},
 		async (req, email, password, done) => {
-			const rows = await orm.gerente.findOne({ where: { email: email } });
+			const rows = await orm.dueño.findOne({ where: { email: email } });
 			if (rows) {
 				const user = rows;
 				const validPassword = await helpers.comparePassword(
@@ -57,7 +57,7 @@ passport.use(
 			passReqToCallback: true,
 		},
 		async (req, email, password, done) => {
-			const usuarios = await orm.gerente.findOne({ where: { email: email }});
+			const usuarios = await orm.dueño.findOne({ where: { email: email }});
 			if (usuarios === null) {
 				const { fullname, username, email, password} = req.body;
 				let nuevoGerente = {
@@ -67,7 +67,7 @@ passport.use(
 					password,
 				};
 				nuevoGerente.password = await helpers.hashPassword(password);
-				const resultado = await orm.gerente.create(nuevoGerente);
+				const resultado = await orm.dueño.create(nuevoGerente);
 				nuevoGerente.id = resultado.insertId;
 				return done(null, nuevoGerente)
 				
@@ -82,7 +82,7 @@ passport.use(
 							password
 						};
 						nuevoGerente.password = await helpers.encryptPassword(password);
-						const resultado = await orm.gerente.create(nuevoGerente);
+						const resultado = await orm.dueño.create(nuevoGerente);
 						nuevoGerente.id = resultado.insertId;
 						return done(null, nuevoGerente);
 					}

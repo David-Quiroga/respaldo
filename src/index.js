@@ -1,6 +1,4 @@
 const app = require('./app');
 
-const port = app.get('port');
-app.listen(port, () => {
-    console.log(`El servidor está escuchando en el puerto ${port}`);
-});
+app.listen(app.get('port'));
+console.log('El servidor esta en el puerto', app.get('port'));
